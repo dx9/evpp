@@ -104,3 +104,8 @@ tools/a.sh
 
 Win32/Debug/ZERO_CHECK
 
+/buck-out/
+/.buckd/
+/buckaroo/
+BUCKAROO_DEPS
+.buckconfig.local
