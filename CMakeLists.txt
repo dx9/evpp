@@ -75,6 +75,8 @@ find_program(THRIFT_COMPILER thrift)
 find_path(THRIFT_INCLUDE_DIR thrift)
 find_library(THRIFT_LIBRARY NAMES thrift)
 
+find_package(Boost REQUIRED COMPONENTS system thread)
+
 message (STATUS "This is BINARY dir " ${PROJECT_BINARY_DIR})
 message (STATUS "This is SOURCE dir " ${PROJECT_SOURCE_DIR})
 message (STATUS "CMAKE_CXX_FLAGS " ${CMAKE_CXX_FLAGS})
