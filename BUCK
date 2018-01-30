@@ -1,6 +1,10 @@
 include_defs('//BUCKAROO_DEPS')
 
 cxx_library(
+    name = 'event', exported_linker_flags = ['-levent']
+)
+
+cxx_library(
     name = 'evpp',
     header_namespace = 'evpp',
     srcs = glob([
@@ -11,7 +15,7 @@ cxx_library(
         ('evpp', '*.h'),
         ('evpp', '**/*.h')
     ]),
-    deps = BUCKAROO_DEPS,
+    deps = BUCKAROO_DEPS + [':event'],
     visibility = ['PUBLIC']
 )
 
